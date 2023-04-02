@@ -3,11 +3,6 @@ import { galleryItems } from "./gallery-items.js";
 
 console.log(galleryItems);
 
-// {/* <li class="gallery__item">
-//    <a class="gallery__link" href="large-image.jpg">
-//       <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-//    </a>
-// </li> */}
 
 const galleryMarkup = makeGalerry(galleryItems).join("");
 const gallery = document.querySelector(".gallery");
@@ -29,8 +24,7 @@ function onClick(event) {
   if (!event.target.classList.contains("gallery__image")) {
     return;
   }
-  const title = event.target.alt;
-  console.log(title);
+ 
   const lightbox = new SimpleLightbox(".gallery a", {
     captionsData: "alt",
     captionDelay: 250,
