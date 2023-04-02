@@ -30,7 +30,7 @@ function makeGalerry(arr) {
   <a class="gallery__link" href="large-image.jpg">
     <img class="gallery__image" src="${item.preview}" data-source="${item.original}" alt="${item.description}"/> </a></li>`
   );
-}
+};
 
 gallery.insertAdjacentHTML("beforeend", galleryMarkup);
 
